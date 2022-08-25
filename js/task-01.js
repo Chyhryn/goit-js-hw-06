@@ -4,7 +4,7 @@ console.log(`Number of categories: ${numberOfCategories}`);
 
 const liEl = document.querySelectorAll(".item");
 
-for (let i = 0; i < liEl.length; i += 1) {
-  console.log(`Category: ${liEl[i].firstElementChild.textContent}`);
-  console.log(`Elements: ${liEl[i].lastElementChild.children.length}`);
-}
+const liElData = liEl.forEach((elem) => {
+  console.log(`Category: ${elem.firstElementChild.textContent}`);
+  console.log(`Elements: ${elem.lastElementChild.children.length}`);
+});
