@@ -15,11 +15,10 @@ const images = [
 
 const ulEl = document.querySelector(".gallery");
 
-const galeryList = [];
+const galeryList = images
+  .map((img) => {
+    return `<li><img src="${img.url}" alt="${img.alt}"></li>`;
+  })
+  .join("");
 
-images.map((img) => {
-  galeryList.push(`<li><img src="${img.url}" alt="${img.alt}"></li>`);
-});
-
-galeryList.join("");
 ulEl.insertAdjacentHTML("beforeend", galeryList);
